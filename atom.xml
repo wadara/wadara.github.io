@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-05-07T23:24:31+09:00</updated>
+  <updated>2014-05-07T23:26:33+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -29,7 +29,7 @@
 <p>以下箇条書きで覚えていることを</p>
 
 <ul>
-<li><p>テストに関する議論はよく炎上する.(dhhの件に触れていました.)</p>
+<li><p>テストに関する議論はよく炎上する.(dhhの件に触れてた.)</p>
 
 <ul>
 <li><p>それはテストの定義がみんなバラバラだから?</p></li>
@@ -53,7 +53,7 @@
 </ul>
 
 
-<p>後半はエンジニアが一生エンジニアでいるためにはどうするべきかというお話でした</p>
+<p>後半はエンジニアが一生エンジニアでいるためにはどうするべきかという話</p>
 
 <ol>
 <li></li>
