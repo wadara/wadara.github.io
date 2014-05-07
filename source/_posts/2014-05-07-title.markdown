@@ -1,8 +1,10 @@
 ---
 layout: post
-title: "title"
+title: "この先生きのこりたいならブログを書け"
 date: 2014-05-07 22:06:48 +0900
 comments: true
 categories: 
 ---
-hogehuga
+
+研修で覚えたことや感想をまとめるためのブログ 
+
