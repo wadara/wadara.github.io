@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-05-08T16:21:24+09:00</updated>
+  <updated>2014-05-08T16:22:42+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -190,7 +190,7 @@
     <id>http://wadara.github.io/blog/2014/05/07/twada</id>
     <content type="html"><![CDATA[<p>エンジニアとしてこの先生きのこるための話</p>
 
-<h2>きのこる本</h2>
+<h3>きのこる本</h3>
 
 <p>きのこる本でも大体半分の人がテストに言及してるのでテストは大事.</p>
 
@@ -273,7 +273,7 @@
 </ul>
 
 
-<h2>感想</h2>
+<h3>感想</h3>
 
 <p>TDDはQAのためというより, 開発者のためのものだという印象だった.</p>
 
