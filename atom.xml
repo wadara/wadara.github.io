@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Blog]]></title>
+  <link href="http://wadara.github.io/atom.xml" rel="self"/>
+  <link href="http://wadara.github.io/"/>
+  <updated>2014-05-08T10:06:29+09:00</updated>
+  <id>http://wadara.github.io/</id>
+  <author>
+    <name><![CDATA[wadara]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Twada さんの講演]]></title>
+    <link href="http://wadara.github.io/blog/2014/05/07/twada/"/>
+    <updated>2014-05-07T22:35:48+09:00</updated>
+    <id>http://wadara.github.io/blog/2014/05/07/twada</id>
+    <content type="html"><![CDATA[<p>エンジニアとしてこの先生きのこるための話</p>
+
+<h2>きのこる本</h2>
+
+<p>きのこる本でも大体半分の人がテストに言及してるのでテストは大事.</p>
+
+<p>なので TDD やりましょうという話が前半</p>
+
+<p>以下箇条書きで覚えていることを</p>
+
+<ul>
+<li><p>テストに関する議論はよく炎上する.(dhhの件に触れてた.)</p>
+
+<ul>
+<li><p>それはテストの定義がみんなバラバラだから?</p></li>
+<li><p>developer test,受け入れ test&hellip;</p></li>
+<li><p>TDD は特にdeveloperが安心するため</p></li>
+</ul>
+</li>
+<li><p>TDD サイクル = red green refactor</p>
+
+<ul>
+<li>Refactor がなかなかできない. refactor をする時間が取られるプロジェクトはいいプロジェクト</li>
+<li>これを黄金の回転で回さないといけない</li>
+</ul>
+</li>
+<li><p>Testで大事なのはrepeatable, independentであること</p>
+
+<ul>
+<li>バランスも大事とかいろいろあったけど忘れた</li>
+</ul>
+</li>
+</ul>
+
+
+<p>後半はエンジニアが一生エンジニアでいるためにはどうするべきかという話</p>
+
+<ol>
+<li></li>
+<li></li>
+</ol>
+
+
+<p> 続きは明日書く()</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[この先生きのこりたいならブログを書け]]></title>
+    <link href="http://wadara.github.io/blog/2014/05/07/title/"/>
+    <updated>2014-05-07T22:06:48+09:00</updated>
+    <id>http://wadara.github.io/blog/2014/05/07/title</id>
+    <content type="html"><![CDATA[<p>研修で覚えたことや感想をまとめるためのブログ</p>
+]]></content>
+  </entry>
+  
+</feed>
