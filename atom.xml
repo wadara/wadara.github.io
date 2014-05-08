@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-05-08T14:10:45+09:00</updated>
+  <updated>2014-05-08T16:13:58+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -18,19 +18,168 @@
     <link href="http://wadara.github.io/blog/2014/05/08/web/"/>
     <updated>2014-05-08T11:23:55+09:00</updated>
     <id>http://wadara.github.io/blog/2014/05/08/web</id>
-    <content type="html"><![CDATA[<p>cool uri</p>
+    <content type="html"><![CDATA[<h2>概要</h2>
 
-<p>http method を考えた設計</p>
+<p>Restとはなにか.</p>
 
-<p>chunk encoding
-basic ninsyou
-digest ninsyou</p>
+<p>またweb を構成するURI,HTTP,HTMLといった技術の説明とこれらを用いたrestful なweb
+の設計方法について述べられている.</p>
 
-<p>micro formats
-atom
-jsonp</p>
+<h2>REST</h2>
 
-<p>uri is daiji</p>
+<ul>
+<li><p>web が成功した理由はREST</p></li>
+<li><p>REST = ULCODC$SS</p>
+
+<ul>
+<li>Uniform          : インタフェースを固定する</li>
+<li>Layered          : システムを階層に分離する</li>
+<li>Code on Demand   : プログラムをクライアントにダウンロードして実行する。</li>
+<li>Client           : ユーザインタフェースと処理を分離する</li>
+<li>Cache            : クライアントとサーバの通信回数と量を減らす</li>
+<li>Stateless Server : サーバ側でアプリケーション状態を持たない</li>
+</ul>
+</li>
+</ul>
+
+
+<p> web サービスを作るときにはこの原則に沿って作るべき</p>
+
+<h2>URI</h2>
+
+<ul>
+<li>cool URI</li>
+</ul>
+
+
+<p>cool なURI とは変わらないURI のことである.</p>
+
+<p>またリンク切れ起こしまくるweb はやだし,</p>
+
+<p>システムの実装が変わるたびにURI が変わるような設計はかっこわるい</p>
+
+<p>だめな例としては</p>
+
+<ul>
+<li>プログラミング言語に依存した拡張子, パスを含むURI</li>
+<li>メソッド名がURIに含まれる</li>
+<li>URIにセッションIDが含まれる</li>
+</ul>
+
+
+<p>こんな感じで, とにかくURIはリソースの名前であり, シンプルであるべきだという話だった.</p>
+
+<p>設計のテクニック等も書いてあったので, 実際設計するときは読むべきかとも思った</p>
+
+<p>けどだいたいはフレームワークがやってくれる話だったりする?</p>
+
+<h2>http </h2>
+
+<ul>
+<li>http はRest の要素をを実現しているプロトコル</li>
+<li>method をきちんと使う</li>
+</ul>
+
+
+<p>httpメソッドのget, post, put, deleteきちんと使い分けできているかという話.</p>
+
+<p>例えばこんな表があるけど,</p>
+
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>          </th>
+<th> get </th>
+<th> post </th>
+<th> put </th>
+<th> delete </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> </td>
+<td> 安全性   </td>
+<td> o   </td>
+<td> x    </td>
+<td> x   </td>
+<td> x      </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> べき等性 </td>
+<td> o   </td>
+<td> x    </td>
+<td> o   </td>
+<td> o      </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>このようなメソッドの仕様をみたさないweb サービスやAPI の設計はしないように気をつけるべきです</p>
+
+<p>（put とdelete がべき等でget が安全なメソッドであるとかいうことはhttpの仕様で定められている)</p>
+
+<p>あとはなんでもかんでもpost でやらないようにしようとか.</p>
+
+<ul>
+<li>ステータスコードを理解する</li>
+</ul>
+
+
+<p> ステータスコードの意味を理解して, 正しいステータスコードを返す設計にしましょう</p>
+
+<ul>
+<li>ヘッダを使う</li>
+</ul>
+
+
+<p>ヘッダ適当にコピペするもの..ではなく考えて使おう.</p>
+
+<p>キャッシュやkeep alive などパフォーマンスに関わるものもあるし, chunk とか認証も大事.</p>
+
+<h2>html</h2>
+
+<ul>
+<li>microformats, Atom, JSON</li>
+</ul>
+
+
+<p> 急にAtom 等が出てきた感じがするけど, この辺は紹介html 関連技術の紹介という感じ</p>
+
+<h2>設計</h2>
+
+<p>最後に郵便番号検索サービスを例にとって具体的な設計の進め方の話がされていた</p>
+
+<ul>
+<li>URI よく考えること</li>
+<li>http メソッドの選定</li>
+<li>トランザクション
+
+<ul>
+<li>Restfulに実現するにはトランザクションリソースを使う</li>
+<li>post で一気にやる</li>
+</ul>
+</li>
+<li>排他制御</li>
+<li>リソースの設計</li>
+</ul>
+
+
+<h2>感想</h2>
+
+<p>この本を読んでおけばweb サービスを構成する基本的な要素について理解する事ができて,
+あとは作りながらググるっていうことができるようになりそう.</p>
+
+<p>単純に知らない事もいっぱいあって勉強になったし, RESTの思想の歴史的背景などは読んでいておもしろかった.</p>
+
+<p>URIやhttpメソッドのだめな例に当てはまっているweb サイトは世の中いっぱいある..</p>
+
+<p>そういうものを作らないように心がけよう</p>
 ]]></content>
   </entry>
   
