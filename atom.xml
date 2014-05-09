@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-05-09T12:36:30+09:00</updated>
+  <updated>2014-05-09T14:10:07+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -18,8 +18,70 @@
     <link href="http://wadara.github.io/blog/2014/05/09/git/"/>
     <updated>2014-05-09T12:34:59+09:00</updated>
     <id>http://wadara.github.io/blog/2014/05/09/git</id>
-    <content type="html"><![CDATA[<p>git の研修で猿でも分かるgit 入門を読みました
-rebase -i 使ってみよう</p>
+    <content type="html"><![CDATA[<p>猿でも分かるgit 入門を読みました</p>
+
+<h3>rebase -i 使おうと思った</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git rebase -i HEAD~~</span></code></pre></td></tr></table></div></figure>
+
+
+<p>でHEADからHEAD~~までのコミットを一気に編集したりまとめたりできる</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>edit 4d5415d hoge
+</span><span class='line'>pick 04d42bd fuga
+</span><span class='line'>squash b83f67a aaa
+</span><span class='line'>pick b33f8c2 bbb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit で編集
+squash でまとめる.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>4d5415d   hoge
+</span><span class='line'>04d42bd   fuga
+</span><span class='line'>b83f67a   aaa
+</span><span class='line'>b33f8c2   !squash fu</span></code></pre></td></tr></table></div></figure>
+
+
+<p>こんな風に</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>b33f8c2   squash! fu</span></code></pre></td></tr></table></div></figure>
+
+
+<p>コミットコメントに !squash とかいとくと</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git rebase -i HEAD~~ --autosquash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>で</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>pick     4d5415d   hoge
+</span><span class='line'>pick     04d42bd   fuga
+</span><span class='line'>squash   b33f8c2   squash! fu
+</span><span class='line'>pick     b83f67a   aaa</span></code></pre></td></tr></table></div></figure>
+
+
+<p>squash! の後ろの文字で前方一致検索して 勝手にsquash してくれる</p>
+
+<h3>~と^ の違い</h3>
+
+<p>よく分かってなかった</p>
+
+<p>^2で母</p>
 ]]></content>
   </entry>
   

@@ -9,9 +9,14 @@
   <meta name="author" content="wadara">
 
   
-  <meta name="description" content="git の研修で猿でも分かるgit 入門を読みました
-rebase -i 使ってみよう
-">
+  <meta name="description" content="猿でも分かるgit 入門を読みました rebase -i 使おうと思った 1
+git rebase -i HEAD~~ でHEADからHEAD~~までのコミットを一気に編集したりまとめたりできる 1
+2
+3
+4
+edit 4d5415d hoge
+pick 04d42bd fuga
+squash &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,8 +101,70 @@ rebase -i 使ってみよう
   </header>
 
 
-  <div class="entry-content"><p>git の研修で猿でも分かるgit 入門を読みました
-rebase -i 使ってみよう</p>
+  <div class="entry-content"><p>猿でも分かるgit 入門を読みました</p>
+
+<h3>rebase -i 使おうと思った</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git rebase -i HEAD~~</span></code></pre></td></tr></table></div></figure>
+
+
+<p>でHEADからHEAD~~までのコミットを一気に編集したりまとめたりできる</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>edit 4d5415d hoge
+</span><span class='line'>pick 04d42bd fuga
+</span><span class='line'>squash b83f67a aaa
+</span><span class='line'>pick b33f8c2 bbb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit で編集
+squash でまとめる.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>4d5415d   hoge
+</span><span class='line'>04d42bd   fuga
+</span><span class='line'>b83f67a   aaa
+</span><span class='line'>b33f8c2   !squash fu</span></code></pre></td></tr></table></div></figure>
+
+
+<p>こんな風に</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>b33f8c2   squash! fu</span></code></pre></td></tr></table></div></figure>
+
+
+<p>コミットコメントに !squash とかいとくと</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git rebase -i HEAD~~ --autosquash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>で</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>pick     4d5415d   hoge
+</span><span class='line'>pick     04d42bd   fuga
+</span><span class='line'>squash   b33f8c2   squash! fu
+</span><span class='line'>pick     b83f67a   aaa</span></code></pre></td></tr></table></div></figure>
+
+
+<p>squash! の後ろの文字で前方一致検索して 勝手にsquash してくれる</p>
+
+<h3>~と^ の違い</h3>
+
+<p>よく分かってなかった</p>
+
+<p>^2で母</p>
 </div>
   
   
