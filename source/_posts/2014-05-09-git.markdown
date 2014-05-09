@@ -1,0 +1,69 @@
+---
+layout: post
+title: "猿でも分かるgit入門"
+date: 2014-05-09 12:34:59 +0900
+comments: true
+categories: 
+---
+
+猿でも分かるgit 入門を読みました
+
+###rebase -i 使おうと思った
+```
+git rebase -i HEAD~~
+```
+でHEADからHEAD~~までのコミットを一気に編集したりまとめたりできる
+
+```
+edit 4d5415d hoge
+pick 04d42bd fuga
+squash b83f67a aaa
+pick b33f8c2 bbb
+```
+edit で編集
+squash でまとめる.
+
+```
+4d5415d   hoge
+04d42bd   fuga
+b83f67a   aaa
+b33f8c2   !squash fu
+```
+こんな風に
+```
+b33f8c2   squash! fu
+```
+コミットコメントに !squash とかいとくと 
+```
+git rebase -i HEAD~~ --autosquash
+```
+で
+```
+pick     4d5415d   hoge
+pick     04d42bd   fuga
+squash   b33f8c2   squash! fu
+pick     b83f67a   aaa
+```
+squash! の後ろの文字で前方一致検索して 勝手にsquash してくれる
+
+
+###~と^ の違い
+よく分かってなかった
+
+
+```
+      A---B---C topic
+     /         \
+D---E---F---G---F master
+```
+
+GがHEADだとすると, 
+
+ *  HEAD^   ... G
+ *  HEAD\^2  ... C
+ *  HEAD\^2^ ... B
+
+####@はreflog をさかのぼる
+
+使った事無いけどいつか使うかもしれない
+
