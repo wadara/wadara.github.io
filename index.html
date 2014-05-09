@@ -164,22 +164,24 @@ squash でまとめる.</p>
 
 <p>よく分かってなかった</p>
 
-<pre><code>  A---B---C topic
- /         \
-</code></pre>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>  A---B---C topic
+</span><span class='line'> /         \
+</span><span class='line'>D---E---F---G---F master</span></code></pre></td></tr></table></div></figure>
 
-<p>D&mdash;-E&mdash;-F&mdash;-G&mdash;-F master</p>
 
 <p>GがHEADだとすると,</p>
 
 <ul>
 <li>HEAD^   &hellip; G</li>
-<li>HEAD<sup>2</sup>  &hellip; C</li>
-<li>HEAD<sup>2</sup>^ &hellip; B</li>
+<li>HEAD^2  &hellip; C</li>
+<li>HEAD^2^ &hellip; B</li>
 </ul>
 
 
-<p>@はreflog をさかのぼる</p>
+<h4>@はreflog をさかのぼる</h4>
 
 <p>使った事無いけどいつか使うかもしれない</p>
 </div>
