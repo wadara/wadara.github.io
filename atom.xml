@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-05-08T16:22:42+09:00</updated>
+  <updated>2014-05-09T12:36:30+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -12,6 +12,16 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[猿でも分かるgit入門]]></title>
+    <link href="http://wadara.github.io/blog/2014/05/09/git/"/>
+    <updated>2014-05-09T12:34:59+09:00</updated>
+    <id>http://wadara.github.io/blog/2014/05/09/git</id>
+    <content type="html"><![CDATA[<p>git の研修で猿でも分かるgit 入門を読みました
+rebase -i 使ってみよう</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Webを支える技術を読んだ]]></title>
