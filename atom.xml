@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-05-09T16:50:21+09:00</updated>
+  <updated>2014-05-09T16:58:32+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -86,10 +86,10 @@ squash でまとめる.</p>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>  A---B---C topic
 </span><span class='line'> /         \
-</span><span class='line'>D---E---F---G---F master</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>D---E---F---G---H master</span></code></pre></td></tr></table></div></figure>
 
 
-<p>FがHEADだとすると,</p>
+<p>HがHEADだとすると,</p>
 
 <ul>
 <li>HEAD^   &hellip; G</li>
