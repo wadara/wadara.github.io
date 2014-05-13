@@ -52,12 +52,12 @@ squash! の後ろの文字で前方一致検索して 勝手にsquash してく�
 
 
 ```
-      A---B---C topic
-     /         \
-D---E---F---G---F master
+                  A---B---C topic
+                 /         \
+            D---E---F---G---H master
 ```
 
-GがHEADだとすると, 
+HがHEADだとすると, 
 
  *  HEAD^   ... G
  *  HEAD\^2  ... C
@@ -66,4 +66,5 @@ GがHEADだとすると,
 ####@はreflog をさかのぼる
 
 使った事無いけどいつか使うかもしれない
+
 
