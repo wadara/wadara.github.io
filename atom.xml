@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-05-09T17:05:11+09:00</updated>
+  <updated>2014-05-13T14:11:07+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -12,6 +12,95 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[IPAで勉強]]></title>
+    <link href="http://wadara.github.io/blog/2014/05/13/title/"/>
+    <updated>2014-05-13T11:15:16+09:00</updated>
+    <id>http://wadara.github.io/blog/2014/05/13/title</id>
+    <content type="html"><![CDATA[<p>昨日やったこと
+IPA の</p>
+
+<ul>
+<li>脆弱性体験ツールやる</li>
+<li>安全なウェブサイトの作り方読む</li>
+<li>linux 標準教科書読む</li>
+</ul>
+
+
+<h3>脆弱性体験ツールApp Goat &amp; 安全なウェブサイトの作り方</h3>
+
+<ul>
+<li>windows しか動かない</li>
+<li>脆弱性のある見本サイトを攻撃しながら、攻撃方法を学ぶ事ができる</li>
+<li><p>XSS, SQL インジェクション, CSRF 等について学んだ</p></li>
+<li><p>XSS</p>
+
+<ul>
+<li>出力文字をエスケープする</li>
+<li>バリデーションもしましょう</li>
+<li>html の入力を許可するサイトは難しい</li>
+</ul>
+</li>
+<li>SQL インジェクション
+
+<ul>
+<li>プレースホルダを使う</li>
+<li>しかも静的プレースホルだにする</li>
+</ul>
+</li>
+<li>CSRF
+
+<ul>
+<li>hidden field 使ってその値が正しい場合のみ処理を実行するようにする</li>
+<li>referer のチェック</li>
+</ul>
+</li>
+<li>OSコマンドインジェクション
+
+<ul>
+<li>シェルを起動できる言語機能の利用を避ける。</li>
+</ul>
+</li>
+<li>session 管理
+
+<ul>
+<li>session id を推測困難にする</li>
+<li>url にいれない</li>
+</ul>
+</li>
+</ul>
+
+
+<p> 上でまとめた以外のこともたくさんある.</p>
+
+<p> サイト作るときはセキュリティのことを常に意識するようにしよう</p>
+
+<h3>linux 標準教科書</h3>
+
+<ul>
+<li>知らなかったコマンド
+
+<ul>
+<li>uniq, tr, あとsort もほとんど使った事無かった</li>
+</ul>
+</li>
+<li>umask
+
+<ul>
+<li>666 から引き算となっていたけど7作りたかったらどうすればいいの</li>
+<li>4桁目はSGIDとかsticky bit のためにあるらしいけど使った事無い</li>
+</ul>
+</li>
+<li>シェルスクリプト</li>
+<li>sh -x でデバッグ実行できる</li>
+<li>知らなかった</li>
+</ul>
+
+
+<p>今日はリーダブルコード読んでいます</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[猿でも分かるgit入門]]></title>

@@ -9,14 +9,12 @@
   <meta name="author" content="wadara">
 
   
-  <meta name="description" content="猿でも分かるgit 入門を読みました rebase -i 使おうと思った 1
-git rebase -i HEAD~~ でHEADからHEAD~~までのコミットを一気に編集したりまとめたりできる 1
-2
-3
-4
-edit 4d5415d hoge
-pick 04d42bd fuga
-squash &hellip;">
+  <meta name="description" content="昨日やったこと
+IPA の 脆弱性体験ツールやる
+安全なウェブサイトの作り方読む
+linux 標準教科書読む 脆弱性体験ツールApp Goat &amp; 安全なウェブサイトの作り方 windows しか動かない
+脆弱性のある見本サイトを攻撃しながら、攻撃方法を学ぶ事ができる
+XSS, SQL &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -72,6 +70,122 @@ squash &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/13/title/">IPAで勉強</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-13T11:15:16+09:00" pubdate data-updated="true">May 13<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>昨日やったこと
+IPA の</p>
+
+<ul>
+<li>脆弱性体験ツールやる</li>
+<li>安全なウェブサイトの作り方読む</li>
+<li>linux 標準教科書読む</li>
+</ul>
+
+
+<h3>脆弱性体験ツールApp Goat &amp; 安全なウェブサイトの作り方</h3>
+
+<ul>
+<li>windows しか動かない</li>
+<li>脆弱性のある見本サイトを攻撃しながら、攻撃方法を学ぶ事ができる</li>
+<li><p>XSS, SQL インジェクション, CSRF 等について学んだ</p></li>
+<li><p>XSS</p>
+
+<ul>
+<li>出力文字をエスケープする</li>
+<li>バリデーションもしましょう</li>
+<li>html の入力を許可するサイトは難しい</li>
+</ul>
+</li>
+<li>SQL インジェクション
+
+<ul>
+<li>プレースホルダを使う</li>
+<li>しかも静的プレースホルだにする</li>
+</ul>
+</li>
+<li>CSRF
+
+<ul>
+<li>hidden field 使ってその値が正しい場合のみ処理を実行するようにする</li>
+<li>referer のチェック</li>
+</ul>
+</li>
+<li>OSコマンドインジェクション
+
+<ul>
+<li>シェルを起動できる言語機能の利用を避ける。</li>
+</ul>
+</li>
+<li>session 管理
+
+<ul>
+<li>session id を推測困難にする</li>
+<li>url にいれない</li>
+</ul>
+</li>
+</ul>
+
+
+<p> 上でまとめた以外のこともたくさんある.</p>
+
+<p> サイト作るときはセキュリティのことを常に意識するようにしよう</p>
+
+<h3>linux 標準教科書</h3>
+
+<ul>
+<li>知らなかったコマンド
+
+<ul>
+<li>uniq, tr, あとsort もほとんど使った事無かった</li>
+</ul>
+</li>
+<li>umask
+
+<ul>
+<li>666 から引き算となっていたけど7作りたかったらどうすればいいの</li>
+<li>4桁目はSGIDとかsticky bit のためにあるらしいけど使った事無い</li>
+</ul>
+</li>
+<li>シェルスクリプト</li>
+<li>sh -x でデバッグ実行できる</li>
+<li>知らなかった</li>
+</ul>
+
+
+<p>今日はリーダブルコード読んでいます</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -562,6 +676,10 @@ squash でまとめる.</p>
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/13/title/">IPAで勉強</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/05/09/git/">猿でも分かるgit入門</a>
