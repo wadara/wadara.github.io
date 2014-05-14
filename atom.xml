@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-05-13T18:53:33+09:00</updated>
+  <updated>2014-05-14T10:51:15+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Play]]></title>
+    <link href="http://wadara.github.io/blog/2014/05/14/title/"/>
+    <updated>2014-05-14T10:43:04+09:00</updated>
+    <id>http://wadara.github.io/blog/2014/05/14/title</id>
+    <content type="html"><![CDATA[<p>play の実習</p>
+
+<ul>
+<li>setup おそい</li>
+</ul>
+
+
+<p> <!-- more --></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Readable_code]]></title>
@@ -175,6 +191,7 @@
 <ul>
 <li>666 から引き算となっていたけど7作りたかったらどうすればいいの</li>
 <li>4桁目はSGIDとかsticky bit のためにあるらしいけど使った事無い</li>
+<li>参考: <a href="http://osknjgk.myhome.cx/wordpress/?p=41">http://osknjgk.myhome.cx/wordpress/?p=41</a></li>
 </ul>
 </li>
 <li>シェルスクリプト</li>
