@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-05-14T11:53:46+09:00</updated>
+  <updated>2014-05-14T14:38:00+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -26,6 +26,71 @@
 
 
 <p> <!-- more --></p>
+
+<ul>
+<li>template</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@* app/views/index.scala.html *@$
+</span><span class='line'>@(message: String)
+</span><span class='line'>
+</span><span class='line'>@main("Welcome to Play 2.1") {
+</span><span class='line'>
+</span><span class='line'>    @play20.welcome(message, style = "Java")
+</span><span class='line'>
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<p>行頭@(message: String) はテンプレートの引数</p>
+
+<p>@xxx()</p>
+
+<p>で, 別のテンプレートを呼び出せて, @main(.. はmain.scala.html を呼び出す</p>
+
+<p>mainをみると</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>@(title: String)(content: Html)
+</span><span class='line'>&lt;!DOCTYPE html&gt;
+</span><span class='line'>&lt;html&gt;
+</span><span class='line'>    &lt;head&gt;
+</span><span class='line'>        &lt;title&gt;@title&lt;/title&gt;
+</span><span class='line'>        &lt;link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")"&gt;
+</span><span class='line'>        &lt;link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")"&gt;
+</span><span class='line'>        &lt;script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"&gt;&lt;/script&gt;
+</span><span class='line'>    &lt;/head&gt;
+</span><span class='line'>    &lt;body&gt;
+</span><span class='line'>        @content
+</span><span class='line'>    &lt;/body&gt;
+</span><span class='line'>&lt;/html&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>こんな感じ. 引数みると, カリー化された定義になってる</p>
+
+<p>ブロック式{}の中身はHtml 型として評価される ? っていうのが今の理解</p>
+
+<p>ちゃんとドキュメント読んでないけど</p>
 ]]></content>
   </entry>
   
