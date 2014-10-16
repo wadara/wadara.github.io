@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-10-16T12:46:31+09:00</updated>
+  <updated>2014-10-16T12:47:23+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -21,10 +21,10 @@
     <content type="html"><![CDATA[<p>intellij を使う</p>
 
 <p>ショートカット
-CMD+SHIFT+A   コマンドなどを検索して実行
-CMD+SHIFT+N   ファイルを検索
-OPT+ENTER   Quick Fix
-CTRL+SHIFT+F    プロジェクトから検索</p>
+ * CMD+SHIFT+A   コマンドなどを検索して実行
+ * CMD+SHIFT+N   ファイルを検索
+ * OPT+ENTER   Quick Fix
+ * CTRL+SHIFT+F    プロジェクトから検索</p>
 ]]></content>
   </entry>
   
