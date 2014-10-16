@@ -9,10 +9,14 @@
   <meta name="author" content="wadara">
 
   
-  <meta name="description" content="intellij を使う ショートカット CMD+SHIFT+A コマンドなどを検索して実行
-CMD+SHIFT+N ファイルを検索
-OPT+ENTER Quick Fix
-CTRL+SHIFT+F プロジェクトから検索 ">
+  <meta name="description" content="猿でも分かるgit 入門を読みました rebase -i 使おうと思った 1
+git rebase -i HEAD~~ でHEADからHEAD~~までのコミットを一気に編集したりまとめたりできる 1
+2
+3
+4
+edit 4d5415d hoge
+pick 04d42bd fuga
+squash &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +25,7 @@ CTRL+SHIFT+F プロジェクトから検索 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://wadara.github.io">
+  <link rel="canonical" href="http://wadara.github.io/blog/page/5">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Blog" type="application/atom+xml">
@@ -74,7 +78,7 @@ CTRL+SHIFT+F プロジェクトから検索 ">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/05/28/intellij/">Intellij</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/05/09/git/">猿でも分かるgit入門</a></h1>
     
     
       <p class="meta">
@@ -90,24 +94,96 @@ CTRL+SHIFT+F プロジェクトから検索 ">
   
 
 
-<time datetime="2014-05-28T14:56:27+09:00" pubdate data-updated="true">May 28<span>th</span>, 2014</time>
+<time datetime="2014-05-09T12:34:59+09:00" pubdate data-updated="true">May 9<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>intellij を使う</p>
+  <div class="entry-content"><p>猿でも分かるgit 入門を読みました</p>
 
-<p>ショートカット</p>
+<h3>rebase -i 使おうと思った</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git rebase -i HEAD~~</span></code></pre></td></tr></table></div></figure>
+
+
+<p>でHEADからHEAD~~までのコミットを一気に編集したりまとめたりできる</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>edit 4d5415d hoge
+</span><span class='line'>pick 04d42bd fuga
+</span><span class='line'>squash b83f67a aaa
+</span><span class='line'>pick b33f8c2 bbb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>edit で編集
+squash でまとめる.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>4d5415d   hoge
+</span><span class='line'>04d42bd   fuga
+</span><span class='line'>b83f67a   aaa
+</span><span class='line'>b33f8c2   !squash fu</span></code></pre></td></tr></table></div></figure>
+
+
+<p>こんな風に</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>b33f8c2   squash! fu</span></code></pre></td></tr></table></div></figure>
+
+
+<p>コミットコメントに !squash とかいとくと</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git rebase -i HEAD~~ --autosquash</span></code></pre></td></tr></table></div></figure>
+
+
+<p>で</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>pick     4d5415d   hoge
+</span><span class='line'>pick     04d42bd   fuga
+</span><span class='line'>squash   b33f8c2   squash! fu
+</span><span class='line'>pick     b83f67a   aaa</span></code></pre></td></tr></table></div></figure>
+
+
+<p>squash! の後ろの文字で前方一致検索して 勝手にsquash してくれる</p>
+
+<h3>~と^ の違い</h3>
+
+<p>よく分かってなかった</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>              A---B---C topic
+</span><span class='line'>             /         \
+</span><span class='line'>        D---E---F---G---H master</span></code></pre></td></tr></table></div></figure>
+
+
+<p>HがHEADだとすると,</p>
 
 <ul>
-<li>CMD+SHIFT+A   コマンドなどを検索して実行</li>
-<li>CMD+SHIFT+N   ファイルを検索</li>
-<li>OPT+ENTER   Quick Fix</li>
-<li>CTRL+SHIFT+F    プロジェクトから検索</li>
+<li>HEAD^   &hellip; G</li>
+<li>HEAD^2  &hellip; C</li>
+<li>HEAD^2^ &hellip; B</li>
 </ul>
 
+
+<h4>@はreflog をさかのぼる</h4>
+
+<p>使った事無いけどいつか使うかもしれない</p>
 </div>
   
   
@@ -117,9 +193,11 @@ CTRL+SHIFT+F プロジェクトから検索 ">
   
   <div class="pagination">
     
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
+      <a class="prev" href="/blog/page/6/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/4/">Newer &rarr;</a>
     
   </div>
 </div>

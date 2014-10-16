@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>My Blog</title>
+  <meta name="author" content="wadara">
+
+  
+  <meta name="description" content="概要 Restとはなにか. またweb を構成するURI,HTTP,HTMLといった技術の説明とこれらを用いたrestful なweb
+の設計方法について述べられている. REST web が成功した理由はREST
+REST = ULCODC$SS Uniform : インタフェースを固定する &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://wadara.github.io/blog/page/6">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="My Blog" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">My Blog</a></h1>
+  
+    <h2>研修ブログ.</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:wadara.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2014/05/08/web/">Webを支える技術を読んだ</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-05-08T11:23:55+09:00" pubdate data-updated="true">May 8<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><h3>概要</h3>
+
+<p>Restとはなにか.</p>
+
+<p>またweb を構成するURI,HTTP,HTMLといった技術の説明とこれらを用いたrestful なweb
+の設計方法について述べられている.</p>
+
+<h3>REST</h3>
+
+<ul>
+<li><p>web が成功した理由はREST</p></li>
+<li><p>REST = ULCODC$SS</p>
+
+<ul>
+<li>Uniform          : インタフェースを固定する</li>
+<li>Layered          : システムを階層に分離する</li>
+<li>Code on Demand   : プログラムをクライアントにダウンロードして実行する。</li>
+<li>Client           : ユーザインタフェースと処理を分離する</li>
+<li>Cache            : クライアントとサーバの通信回数と量を減らす</li>
+<li>Stateless Server : サーバ側でアプリケーション状態を持たない</li>
+</ul>
+</li>
+</ul>
+
+
+<p> web サービスを作るときにはこの原則に沿って作るべき</p>
+
+<h3>URI</h3>
+
+<ul>
+<li>cool URI</li>
+</ul>
+
+
+<p>cool なURI とは変わらないURI のことである.</p>
+
+<p>またリンク切れ起こしまくるweb はやだし,</p>
+
+<p>システムの実装が変わるたびにURI が変わるような設計はかっこわるい</p>
+
+<p>だめな例としては</p>
+
+<ul>
+<li>プログラミング言語に依存した拡張子, パスを含むURI</li>
+<li>メソッド名がURIに含まれる</li>
+<li>URIにセッションIDが含まれる</li>
+</ul>
+
+
+<p>こんな感じで, とにかくURIはリソースの名前であり, シンプルであるべきだという話だった.</p>
+
+<p>設計のテクニック等も書いてあったので, 実際設計するときは読むべきかとも思った</p>
+
+<p>けどだいたいはフレームワークがやってくれる話だったりする?</p>
+
+<h3>http</h3>
+
+<ul>
+<li>http はRest の要素をを実現しているプロトコル</li>
+<li>method をきちんと使う</li>
+</ul>
+
+
+<p>httpメソッドのget, post, put, deleteきちんと使い分けできているかという話.</p>
+
+<p>例えばこんな表があるけど,</p>
+
+<table>
+<thead>
+<tr>
+<th> </th>
+<th>          </th>
+<th> get </th>
+<th> post </th>
+<th> put </th>
+<th> delete </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> </td>
+<td> 安全性   </td>
+<td> o   </td>
+<td> x    </td>
+<td> x   </td>
+<td> x      </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> べき等性 </td>
+<td> o   </td>
+<td> x    </td>
+<td> o   </td>
+<td> o      </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+
+
+<p>このようなメソッドの仕様をみたさないweb サービスやAPI の設計はしないように気をつけるべきです</p>
+
+<p>（put とdelete がべき等でget が安全なメソッドであるとかいうことはhttpの仕様で定められている)</p>
+
+<p>あとはなんでもかんでもpost でやらないようにしようとか.</p>
+
+<ul>
+<li>ステータスコードを理解する</li>
+</ul>
+
+
+<p> ステータスコードの意味を理解して, 正しいステータスコードを返す設計にしましょう</p>
+
+<ul>
+<li>ヘッダを使う</li>
+</ul>
+
+
+<p>ヘッダ適当にコピペするもの..ではなく考えて使おう.</p>
+
+<p>キャッシュやkeep alive などパフォーマンスに関わるものもあるし, chunk とか認証も大事.</p>
+
+<h3>html</h3>
+
+<ul>
+<li>microformats, Atom, JSON</li>
+</ul>
+
+
+<p> 急にAtom 等が出てきた感じがするけど, この辺は紹介html 関連技術の紹介という感じ</p>
+
+<h3>設計</h3>
+
+<p>最後に郵便番号検索サービスを例にとって具体的な設計の進め方の話がされていた</p>
+
+<ul>
+<li>URI よく考えること</li>
+<li>http メソッドの選定</li>
+<li>トランザクション
+
+<ul>
+<li>Restfulに実現するにはトランザクションリソースを使う</li>
+<li>post で一気にやる</li>
+</ul>
+</li>
+<li>排他制御</li>
+<li>リソースの設計</li>
+</ul>
+
+
+<h3>感想</h3>
+
+<p>この本を読んでおけばweb サービスを構成する基本的な要素について理解する事ができて,
+あとは作りながらググるっていうことができるようになりそう.</p>
+
+<p>単純に知らない事もいっぱいあって勉強になったし, RESTの思想の歴史的背景などは読んでいておもしろかった.</p>
+
+<p>URIやhttpメソッドのだめな例に当てはまっているweb サイトは世の中いっぱいある..</p>
+
+<p>そういうものを作らないように心がけよう</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/7/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/5/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+  <p>I am wadara.</p>
+</section>
+<section>
+  <h1>Links</h1>
+  <li>
+  <a href="http://osknjgk.myhome.cx/wordpress/">お魚地獄</a>
+  </li>
+  <li>
+  <a href="http://nakailand.com/">go go nakazy</a>
+  </li>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/05/28/intellij/">Intellij</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/14/title/">Play</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/13/readable-code/">Readable_code</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/13/title/">IPAで勉強</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/09/git/">猿でも分かるgit入門</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - wadara -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'wadara';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

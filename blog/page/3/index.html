@@ -9,10 +9,15 @@
   <meta name="author" content="wadara">
 
   
-  <meta name="description" content="intellij を使う ショートカット CMD+SHIFT+A コマンドなどを検索して実行
-CMD+SHIFT+N ファイルを検索
-OPT+ENTER Quick Fix
-CTRL+SHIFT+F プロジェクトから検索 ">
+  <meta name="description" content="まとめ 命名規則
+indent とかブロック整列
+コメント
+制御文の書き方
+変数の使い方
+関数に抽出する
+テストの書き方 簡単に書いてしまうと上みたいなことが, 丁寧に例を用いて説明してある return を早めにして, ネストを少なくする
+複雑な条件はドモルガンを使うと簡潔になることも
+x = &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +26,7 @@ CTRL+SHIFT+F プロジェクトから検索 ">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://wadara.github.io">
+  <link rel="canonical" href="http://wadara.github.io/blog/page/3">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Blog" type="application/atom+xml">
@@ -74,7 +79,7 @@ CTRL+SHIFT+F プロジェクトから検索 ">
       
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/05/28/intellij/">Intellij</a></h1>
+      <h1 class="entry-title"><a href="/blog/2014/05/13/readable-code/">Readable_code</a></h1>
     
     
       <p class="meta">
@@ -90,24 +95,89 @@ CTRL+SHIFT+F プロジェクトから検索 ">
   
 
 
-<time datetime="2014-05-28T14:56:27+09:00" pubdate data-updated="true">May 28<span>th</span>, 2014</time>
+<time datetime="2014-05-13T17:48:08+09:00" pubdate data-updated="true">May 13<span>th</span>, 2014</time>
         
       </p>
     
   </header>
 
 
-  <div class="entry-content"><p>intellij を使う</p>
-
-<p>ショートカット</p>
+  <div class="entry-content"><h3>まとめ</h3>
 
 <ul>
-<li>CMD+SHIFT+A   コマンドなどを検索して実行</li>
-<li>CMD+SHIFT+N   ファイルを検索</li>
-<li>OPT+ENTER   Quick Fix</li>
-<li>CTRL+SHIFT+F    プロジェクトから検索</li>
+<li>命名規則</li>
+<li>indent とかブロック整列</li>
+<li>コメント</li>
+<li>制御文の書き方</li>
+<li>変数の使い方</li>
+<li>関数に抽出する</li>
+<li>テストの書き方</li>
 </ul>
 
+
+<p>簡単に書いてしまうと上みたいなことが, 丁寧に例を用いて説明してある</p>
+
+<ul>
+<li>return を早めにして, ネストを少なくする</li>
+<li>複雑な条件はドモルガンを使うと簡潔になることも</li>
+<li>x = a || b || c</li>
+<li>比較演算子は右側によく変わるものをもってくるべき</li>
+</ul>
+
+
+<p>とかテクニック的にすぐ使える話も多い.</p>
+
+<h3>感想</h3>
+
+<p>命名規則でget, set などのメソッドは軽量であるべきとか, 知らなかったのでヤバいな
+と思った</p>
+
+<p>テクニック的なことが多くて楽しい.</p>
+
+<p>テストのところもはこれからどんどんテスト書くと思うので, 読んでおいてよかった</p>
+
+<p>なるほどという感じ.</p>
+
+<p>コメントをかかなと思った. 6ヶ月後の自分のため</p>
+
+<p>1~14章までは分かりやすくスラスラ読めたけど, 15章が急に読みにくく感じた</p>
+
+<p>コード読めば分かるけど, 日本語が読みづらいような</p>
+
+<p>例えばConverterQueueのShiftメソッドの説明で,</p>
+
+<pre><code>* 最古の項目はmax_items 以下なら削除する
+</code></pre>
+
+<p>という文があるけど, 原文は</p>
+
+<pre><code>* Oldest items will be removed so there are &lt;= max_items.
+</code></pre>
+
+<p>となっていて,</p>
+
+<pre><code>* 最古の項目が削除されるので, items数はmax_items以下になる
+</code></pre>
+
+<p>と訳すのがあってるきがする.</p>
+
+<p>あとは,</p>
+
+<pre><code>* 最新のnum_buckets の時間に含まれる合計カウントを返す 
+</code></pre>
+
+<p>とか分からない</p>
+
+<p>原文は</p>
+
+<pre><code>* Return the total count over the last num_buckets worth of time
+</code></pre>
+
+<p>だけど, これは原文みてもよく訳せない..</p>
+
+<p>おわり</p>
+
+<p>一日本読むと眠い</p>
 </div>
   
   
@@ -117,9 +187,11 @@ CTRL+SHIFT+F プロジェクトから検索 ">
   
   <div class="pagination">
     
-      <a class="prev" href="/blog/page/2/">&larr; Older</a>
+      <a class="prev" href="/blog/page/4/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/2/">Newer &rarr;</a>
     
   </div>
 </div>
