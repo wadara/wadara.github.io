@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-05-14T14:38:00+09:00</updated>
+  <updated>2014-10-16T12:37:20+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Intellij]]></title>
+    <link href="http://wadara.github.io/blog/2014/05/28/intellij/"/>
+    <updated>2014-05-28T14:56:27+09:00</updated>
+    <id>http://wadara.github.io/blog/2014/05/28/intellij</id>
+    <content type="html"><![CDATA[<p>intellij を使う</p>
+
+<p>ショートカット
+CMD+SHIFT+A   コマンドなどを検索して実行
+CMD+SHIFT+N   ファイルを検索
+OPT+ENTER   Quick Fix
+CTRL+SHIFT+F    プロジェクトから検索</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Play]]></title>
