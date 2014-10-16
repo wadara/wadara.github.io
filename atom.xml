@@ -4,7 +4,7 @@
   <title><![CDATA[My Blog]]></title>
   <link href="http://wadara.github.io/atom.xml" rel="self"/>
   <link href="http://wadara.github.io/"/>
-  <updated>2014-10-16T12:54:34+09:00</updated>
+  <updated>2014-10-16T14:18:44+09:00</updated>
   <id>http://wadara.github.io/</id>
   <author>
     <name><![CDATA[wadara]]></name>
@@ -25,7 +25,8 @@
 <ul>
 <li>CMD+SHIFT+A   コマンドなどを検索して実行</li>
 <li>CMD+SHIFT+N   ファイルを検索</li>
-<li>OPT+ENTER   Quick Fix</li>
+<li>OPT+ENTER   Quick Fix
+<!-- more --></li>
 <li>CTRL+SHIFT+F    プロジェクトから検索</li>
 </ul>
 
